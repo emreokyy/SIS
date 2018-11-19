@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane stylesheets="@app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sis.controller.AboutMessageController">
+   <children>
+      <ImageView id="image" fx:id="imageview" fitHeight="351.0" fitWidth="352.0" layoutX="-1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@article-0-0F4156B800000578-639_964x970.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="14.0" layoutY="191.0" text="Product Version :&#10;Satellite Information System 1.0.0&#10;Build Information :&#10;Version 1.0.0&#10;Date: 2018-07-23&#10;&#10;Created by Emre OKYAY" textFill="#fffdfd" />
+   </children>
+</Pane>

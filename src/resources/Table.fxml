@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<BorderPane fx:id="borderPane" prefHeight="708.0" prefWidth="947.0" stylesheets="@app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sis.controller.TableController">
+   <top>
+      <MenuBar fx:id="MenuBar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="menuNew" mnemonicParsing="false" text="New" />
+                  <MenuItem fx:id="menuOpen" mnemonicParsing="false" onAction="#OpenButtonClicked" text="Open" />
+                  <MenuItem fx:id="menuSave" mnemonicParsing="false" text="Save" />
+              <MenuItem fx:id="menuClose" mnemonicParsing="false" onAction="#CloseButtonClicked" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                  <MenuItem fx:id="AddMenuItem" mnemonicParsing="false" text="Add" />
+                  <MenuItem fx:id="DeleteMenuItem" mnemonicParsing="false" text="Delete" />
+              <MenuItem fx:id="UpdateMenuItem" mnemonicParsing="false" text="Update" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="AboutItem" mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <HBox spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnadd" mnemonicParsing="false" onAction="#addButtonClicked" stylesheets="@app.css" text="Add" />
+            <Button fx:id="btndelete" mnemonicParsing="false" onAction="#deleteButtonClicked" text="Delete" />
+            <Button fx:id="btnupdate" mnemonicParsing="false" onAction="#updateButtonClicked" text="Update" />
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <right>
+      <VBox spacing="25.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnLogOut" mnemonicParsing="false" onAction="#LogOutButtonClicked" text="Log Out">
+               <VBox.margin>
+                  <Insets left="100.0" top="-15.0" />
+               </VBox.margin></Button>
+            <Line endX="61.5" startX="-100.0" stroke="#b2afaf" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets top="-15.0" />
+               </VBox.margin>
+            </Line>
+            <Label text="Satellite Informations :">
+               <VBox.margin>
+                  <Insets top="-20.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txtname" />
+            <TextField fx:id="txtcountry" />
+            <TextField fx:id="txtpurpose" />
+            <TextField fx:id="txtorbit" />
+            <TextField fx:id="txtperigee" />
+            <TextField fx:id="txtapogee" />
+            <ImageView fitHeight="124.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Göktürk2.png" />
+               </image>
+            </ImageView>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="10.0" left="8.0" right="8.0" top="25.0" />
+         </padding>
+      </VBox>
+   </right>
+   <center>
+      <TableView fx:id="table" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="clmsatname" prefWidth="98.0" text="Satellite Name" />
+          <TableColumn fx:id="clmcountry" prefWidth="52.0" text="Country/Org of UN Registry" />
+            <TableColumn fx:id="clmpurpose" prefWidth="75.0" text="Purpose" />
+            <TableColumn fx:id="clmorbit" prefWidth="93.0" text="Class of Orbit" />
+            <TableColumn fx:id="clmperigee" prefWidth="75.0" text="Perigee(km)" />
+            <TableColumn fx:id="clmapogee" prefWidth="75.0" text="Apogee(km)" />
+        </columns>
+      </TableView>
+   </center>
+   <left>
+      <TreeView fx:id="tree" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>

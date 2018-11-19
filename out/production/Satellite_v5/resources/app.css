@@ -1,0 +1,27 @@
+/*.root{
+    -fx-background: rgb(255, 255, 255);
+}*/
+
+#btnadd {
+    -fx-background-color:
+            linear-gradient(#01bb0e, #25af0c),
+            radial-gradient(center 50% -40%, radius 200%, #31b412 45%, #4db500 50%);
+    -fx-background-radius: 6, 5;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: #000000;
+}
+#btndelete{
+    -fx-background-color:
+            linear-gradient(#c2090c, #b60a0a),
+            radial-gradient(center 50% -40%, radius 200%, #b31907 45%, #b80500 50%);
+    -fx-background-radius: 6, 5;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: #ffffff;
+}
+
+#image{
+    -fx-background-repeat:stretch;
+    -fx-background-position: center center;
+}
